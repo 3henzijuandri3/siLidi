@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    .scrollbar::-webkit-scrollbar {
+        height: 15px;
+        background: transparent;
+    }
+  
+   .scrollbar::-webkit-scrollbar-track {
+        border-radius: 100vh;
+        background: transparent;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: #D5D5D5;
+        border-radius: 100vh;
+        border: 1px solid none;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #D5D5D5;
+    }
+
+}
+
+@layer components {
+    .garis-merah {
+        @apply border border-red-500
+    }
+
+    .garis-biru {
+        @apply border border-blue-500
+    }
+
+    .garis-hijau {
+        @apply border border-green-500
+    }
+
+    .mini-card {
+        @apply w-[80%] p-2 m-auto rounded-xl bg-white md:w-[85%] lg:p-5
+    }
+
+    .card {
+        @apply rounded-xl shadow-lg bg-white
+    }
+
+    .card-top-3 {
+        @apply rounded-lg shadow-lg bg-white 
+    }
+
+    .no-card {
+        @apply rounded-none shadow-none bg-background
+    }
+
+    .tim-card {
+        @apply w-[80%] rounded-2xl bg-white shadow-xl sm:w-[45%] lg:w-[18%]
+    }
+
+    .scroll-nav {
+        @apply p-10
+    }
+
+    .sosmed-card {
+        @apply w-[45%] pl-5 py-4 text-center relative bg-background rounded-xl lg:py-7
+
+    }
+
+    .gradient-hijau {
+        @apply bg-gradient-to-b from-green-primary via-green-500 to-green-400
+    }
+
+    .gradient-cokelat {
+        @apply bg-gradient-to-br from-[#9F8772] to-[#755E4A]
+    }
+
+    .gradient-footer {
+        @apply bg-gradient-to-b from-[#9A826D] to-[#755E4A]
+    }
+
+    .border-bawah {
+        @apply border border-t-0 border-l-0 border-r-0 border-b-hitam-pucat
+    }
+
+    .card-tipis {
+        @apply border border-[#D5D5D5] bg-white rounded-xl
+    }
+
+    .nav-btn {
+        @apply hover:text-cokelat active:-translate-y-1 transition
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrolled_navbar {
+        @apply lg:px-2 lg:py-7 lg:shadow-lg lg:bg-white
+    }
+
+    .table-head {
+        @apply text-sm font-nunito-sans font-bold border-r-2 border-white
+    }
+
+    .table-isi {
+        @apply p-3 border-r-2 border-white
+    }
+
+    .animasi {
+        @apply transition-all ease-in-out duration-300
+    }
+
+    /* For IE, Edge and Firefox */
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+}
+

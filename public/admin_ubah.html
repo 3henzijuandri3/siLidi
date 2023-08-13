@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+        <link rel="stylesheet" href="./CSS/style.css">
+
+        <title> Ubah Barang </title>
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header class="top-0 w-full p-3 fixed bg-white shadow-md z-[20]">
+            <div class="container flex justify-between">
+
+                <!-- Bagian Kiri -->
+                <a href="admin_produk.html" class="my-auto text-xl font-nunito-sans font-bold hover:opacity-60 transition-all ease-in-out duration-200"> < List Produk </a>
+
+                <!-- Bagian Tengah -->
+                <h1 class="mr-5 text-4xl text-green-primary font-nunito-sans font-black"> SiLidi </h1>
+
+                <!-- Bagian Kanan -->
+                <div class="icon-profile relative flex w-[10%] px-2 border-2 border-green-primary shadow-md rounded-full cursor-pointer group">
+                    <p class="m-auto text-base font-nunito-sans font-bold group-hover:opacity-70"> Admin SiLidi </p>
+
+                    <!-- Modal Dropdown -->
+                    <div id="modal-dropdown" class="absolute -right-5 top-[60px] max-w-[250px] w-[150px] p-3 bg-white rounded-lg shadow-lg transition-all ease-in-out duration-300 opacity-0 invisible">
+
+                        <ul class="flex flex-col gap-4">
+                            <li class="text-center">
+                                <a href="admin_login.html" class="text-base font-nunito-sans font-semibold cursor-pointer hover:text-green-primary"> Logout </a>
+                            </li>
+                
+                            <li class="text-center">
+                                <a href="admin_produk.html" class="text-base font-nunito-sans font-semibold cursor-pointer hover:text-green-primary"> List Produk </a>
+                            </li>
+
+                            <li class="text-center">
+                                <a href="admin_seller.html" class="text-base font-nunito-sans font-semibold cursor-pointer hover:text-green-primary"> List Seller </a>
+                            </li>
+                        </ul>
+            
+                    </div>
+
+                </div>
+
+
+            </div>
+        </header>
+
+        <!-- Overlay Modal Dropdown -->
+        <div id="overlay-dropdown" class="h-screen w-screen fixed z-[9] hidden"></div>
+        
+        <!-- Isi Konten Ubah Barang -->
+        <section id="ubah-barang" class="mt-24">
+            <div class="container">
+                <div class="flex">
+
+                    <!-- Form Ubah Barang -->
+                    <div id="modal-desktop-tambah" class="w-full">
+
+                        <!-- Caption -->
+                        <div class="flex justify-between w-full mb-10">
+                            
+                            <!-- Kiri -->
+                            <div class="text-left">
+                                <h1 class="text-3xl font-nunito-sans font-bold"> Ubah Data Kerajinan SiLidi </h1>
+                                <p class="text-base font-nunito-sans font-light"> Masukkan data mengenai kerajinan yang ingin diubah </p>
+                            </div>
+
+                            <!-- Kanan -->
+                            <div class="text-right">
+                                <h1 class="text-4xl text-green-primary font-black"> SiLidi </h1>
+                            </div>
+
+                        </div>
+                
+                        <!-- Form Data Barang -->
+                        <form class="w-full flex">
+
+                            <!-- Kiri -->
+                            <div class="w-[60%] flex flex-col gap-3">
+
+                                <!-- ID Seller -->
+                                <div class="text-sm font-nunito-sans font-semibold">
+                                    <label for="id">ID Seller</label>
+                                    <input class="w-full p-4 text-hitam-secondary font-normal border border-green-primary rounded-lg animasi" type="text" name="id" id="id" required>
+                                </div>
+                                
+                                <!-- Nama Barang & Kategori Barang -->
+                                <div class="w-full flex justify-between">
+                                    <div class="text-sm font-nunito-sans font-semibold">
+                                        <label for="nama">Nama barang</label>
+                                        <input class="w-full p-4 text-hitam-secondary font-normal border border-green-primary rounded-lg" type="text" name="nama" id="nama" required>
+                                    </div>
+                        
+                                    <div class="text-sm font-nunito-sans font-semibold">
+                                        <label for="kategori">Kategori Barang</label>
+                                        <input class="w-full p-4 text-hitam-secondary font-normal border border-green-primary rounded-lg" type="text" name="kategori" id="kategori" required>
+                                    </div>
+                                </div>
+
+                                <!-- Deskripsi Barang -->
+                                <div class="w-full text-sm font-nunito-sans font-semibold">
+                                    <label for="detail">Deskripsi Barang</label>
+                                    <textarea class="w-full p-2 h-[100px] border border-green-primary rounded-lg" type="text" name="detail" id="detail" required> </textarea>
+                                </div>
+
+                                <!-- Nama Barang & Kategori Barang -->
+                                <div class="w-full flex justify-between">
+                                    <div class="text-sm font-nunito-sans font-semibold">
+                                        <label for="berat">Berat</label>
+                                        <input class="w-full p-2 text-hitam-secondary font-normal border border-green-primary rounded-lg" type="text" name="berat" id="berat" required>
+                                    </div>
+                        
+                                    <div class="text-sm font-nunito-sans font-semibold">
+                                        <label for="diameter">Diameter</label>
+                                        <input class="w-full p-2 text-hitam-secondary font-normal border border-green-primary rounded-lg" type="text" name="diameter" id="diameter" required>
+                                    </div>
+                        
+                                    <div class="text-sm font-nunito-sans font-semibold">
+                                        <label for="tinggi">Tinggi</label>
+                                        <input class="w-full p-2 text-hitam-secondary font-normal border border-green-primary rounded-lg" type="text" name="tinggi" id="tinggi" required>
+                                    </div>
+                                </div>
+
+                                <!-- Harga Barang -->
+                                <div class="text-sm font-nunito-sans font-semibold">
+                                    <label for="harga">Harga Barang</label>
+                                    <input class="w-full p-4 text-hitam-secondary font-normal border border-green-primary rounded-lg" type="text" name="harga" id="harga" required>
+                                </div>
+                            </div>
+
+                            <!-- Kanan -->
+                            <div class="w-[40%] flex flex-col justify-center items-end">
+                                <!-- Show Gambar -->
+                                <div class="w-[380px] h-[280px] mb-3 border border-hitam-pucat rounded-xl">
+                                    <img id="gambar-input" class="w-full h-full rounded-xl">
+                                </div>
+
+                                <!-- Input Gambar -->
+                                <div class="w-[72%] mb-5">
+                                    <input class="w-full p-2 text-hitam-secondary font-normal border rounded-lg" type="file" name="gambar" id="gambar"  onchange="loadFile(event)" required>
+                                </div>
+
+                                <!-- Button Hubungi Seller -->
+                                <button class="w-[72%] p-4 text-xl text-white font-nunito-sans font-bold bg-green-primary rounded-lg hover:opacity-80 transition-all ease-in-out duration-200"> Ubah Barang </button>
+                            </div>
+                        </form>
+                
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script src="./js/admin_ubah.js"></script>
+    </body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800&family=Nunito:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./CSS/style.css">
+
+        <title> Tentang Kami </title>
+    </head>
+
+    <body class="bg-background">
+
+        <!-- Mobile Top Navigation -->
+        <header class="w-full absolute">
+        
+            <div class="container flex mt-4 ">
+                <!-- Icon Panah Back -->
+                <a href="index.html" class="lg:hidden md:hidden ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                    </svg>  
+                </a>
+
+                <!-- Headline Tentang Kami -->
+                <h1 class="m-auto pr-8 text-2xl font-nunito-sans font-bold md:pr-0"> Tentang Kami </h1>
+            </div>
+
+        </header>
+
+        <!-- Top Navigation -->
+        <header class="w-full z-10 fixed px-2 py-7 shadow-lg bg-white hidden lg:block">
+            <div class="container w-full flex justify-between mt-3">
+
+                <!-- Header Kiri -->
+                <div class="flex justify-between w-[50%] ">
+                    <!-- Icon SiLidi -->
+                    <p class="m-auto text-hitam-primary font-nunito-sans font-black text-4xl"> <span class="text-green-primary">Si</span>Lidi</p>
+
+                    <!-- List Navigasi -->
+                    <ul class="flex justify-around w-[75%] m-auto">
+                        <li><a href="index.html" class="block text-lg text-hitam-pucat font-nunito-sans font-bold hover:scale-90 transition-all ease-in-out duration-150"> Home </a></li>
+            
+                        <li><a href="product.html" class="block text-lg text-hitam-pucat font-nunito-sans font-bold hover:scale-90 transition-all ease-in-out duration-150"> Product </a></li>
+            
+                        <li><a href="pelatihan.html" class="block text-lg text-hitam-pucat font-nunito-sans font-bold hover:scale-90 transition-all ease-in-out duration-150"> Pelatihan </a></li>
+            
+                        <li><a href="about.html" class="block text-lg text-hitam-primary font-nunito-sans font-bold hover:scale-90 transition-all ease-in-out duration-150"> About Us </a></li>
+                    </ul>
+                </div>
+
+                <!-- Header Kanan -->
+                <div class="flex justify-between w-[45%] relative">
+                    <!-- Search Bar -->
+                    <form class="relative w-[65%]">
+                        <input
+                        type="text"
+                        placeholder="Cari Produk"
+                        class="w-full px-14 py-2 text-hitam-pucat text-sm font-black placeholder-hitam-pucat font-nunito-sans rounded-full bg-transparent border-2 border-hitam-pucat focus:outline-none focus:outline-[#C5D8A4] transition-all duration-150 ease-in-out" 
+                        />
+
+                        <span class="p-1.5 absolute top-1/2 left-1.5 -translate-y-1/2 text-hitam-pucat">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                        </span>
+                    </form>
+
+                    <!-- Icon About -->
+                    <span class="book block text-hitam-pucat ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                        </svg>
+                    </span>
+
+                    <!-- Icon Profile -->
+                    <span class="icon-profile text-hitam-pucat rounded-full cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </span>
+
+                    <!-- Modal Dropdown -->
+                    <div id="modal-dropdown" class="absolute right-0 top-[55px] max-w-[250px] w-[120px] p-3 bg-white rounded-lg shadow-lg transition-all ease-in-out duration-300 opacity-0 invisible">
+                    
+                        <ul class="flex flex-col gap-4">
+                            <li class="text-center">
+                                <a href="login.html" class="text-base font-nunito-sans font-semibold cursor-pointer hover:text-cokelat md:text-lg"> Login </a>
+                            </li>
+                
+                            <li class="text-center">
+                                <a href="register.html" class="text-base font-nunito-sans font-semibold cursor-pointer hover:text-cokelat md:text-lg"> Register </a>
+                            </li>
+
+                            <li class="text-center">
+                                <a href="register.html" class="text-base font-nunito-sans font-semibold cursor-pointer hover:text-cokelat md:text-lg"> Logout </a>
+                            </li>
+                        </ul>
+            
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overlay Modal Dropdown -->
+        <div id="overlay-dropdown" class="h-screen w-screen fixed z-[9] hidden"></div>
+
+        <!-- Mobile Bottom Navigation -->
+        <header class="w-full fixed z-10 bottom-0 lg:hidden">
+            <div class="w-full flex justify-between relative">
+
+                <!-- Navigasi Kiri -->
+                <div class="flex justify-evenly w-[45%] py-3 rounded-r-[2rem] rounded-l-lg bg-white text-green-primary min-[500px]:w-[46%] min-[700px]:w-[47%] sm:justify-around min-[910px]:w-[47.5%]">
+                    <!-- Home -->
+                    <button class="home-btn nav-btn" title="Home">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7">
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    </button>
+        
+                    <!-- Produk -->
+                    <button class="product-btn nav-btn" title="Product">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7">
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                    </button>
+                </div>
+        
+                <!-- Navigasi Kanan -->
+                <div class="flex justify-evenly w-[45%] py-3 rounded-l-[2rem] rounded-r-lg bg-white text-green-primary min-[500px]:w-[46%] min-[700px]:w-[47%] sm:justify-around min-[910px]:w-[47.5%]">
+                    <!-- Pelatihan -->
+                    <button class="pelatihan-btn nav-btn" title="Pelatihan">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7">
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </button>
+        
+                    <!-- About Us -->
+                    <button class="about-btn nav-btn" title="About Us">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 sm:w-7 sm:h-7">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                        </svg>
+                    </button>
+                </div>
+        
+                <!-- Tombol tengah -->
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-[50px] h-[50px] sm:-top-4 sm:w-14 sm:h-14">
+                    <button class="bg-green-primary border-[10px] border-transparent rounded-full w-full h-full hover:-translate-y-1 transition duration-300">
+                    <div class="text-white flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 m-auto" fill="currentColor" class="bi bi-signpost-2" viewBox="0 0 16 16">
+                            <path
+                                d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
+                        </svg>
+                    </div>
+                    </button>
+                </div>
+        
+                <!-- Background Putih Tengah -->
+                <div class="absolute z-[-1] h-[60%] bottom-0 left-1/2 -translate-x-1/2 w-1/2 bg-white sm:h-[70%]"></div>
+            </div>
+        </header>
+
+        <!-- Blob Hijau -->
+        <div class="absolute z-[-1] w-fit right-0 top-0 hidden lg:block">
+            <img src="./img/blobAbout.png" alt="Blob Hijau">
+        </div>
+        
+        <!-- Isi konten Tentang Kami -->
+        <section>
+            <div class="container mb-32">
+
+                <!-- Whole Content Wrapper -->
+                <div class="flex flex-wrap">
+
+                    <!-- Opening About Desktop -->
+                    <div class="w-full h-[94vh] mt-[50px] hidden lg:flex lg:justify-between">
+
+                        <!-- Caption Opening -->
+                        <div class="w-[60%] my-auto text-left xl:w-[65%]">
+                            <h1 class="mb-2 text-3xl leading-snug font-nunito-sans font-bold xl:text-4xl 2xl:text-5xl"> Mau Lihat Update Terbaru? </h1>
+
+                            <h1 class="mb-5 text-3xl leading-snug font-nunito-sans font-bold xl:text-4xl 2xl:text-5xl"> Mau Tau Juga Tentang SiLidi? </h1>
+
+                            <p class="text-xl text-hitam-pucat leading-snug font-nunito-sans font-normal xl:text-2xl"> Apakah anda ingin mendapatkan penghasilan tambahan di waktu luang? Ayo belajar memanfaatkan lidi dengan membuat kerajinan lidi bersama SiLidi. Belajar dimana saja, kapan saja, dengan SiLidi. </p>
+                        </div>
+
+                        <!-- Gambar Opening -->
+                        <div class="flex w-[30%] xl:w-[36%]">
+
+                            <img src="./img/about.png" alt="Icon Cart" class="w-[100%] m-auto xl:w-[100%]">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Desktop Flex Container (Carousel-Kolaborasi-Jual) -->
+                    <div class="w-full mt-20 lg:mt-0 lg:mb-8 lg:flex lg:justify-between">
+
+                        <!-- Carousel Pedagang -->
+                        <div class="w-full mb-8 self-center card-tipis bg-white rounded-b-2xl rounded-tl-[70px] lg:w-[48%] lg:mb-0">
+
+                            <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
+                    
+                                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                                    <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"
+                                    ></button>
+                        
+                                    <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"
+                                    ></button>
+                        
+                                    <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"
+                                    ></button>
+                                </div>
+                        
+                                <div class="carousel-inner relative w-full overflow-hidden rounded-tl-[70px] rounded-br-[70px]">
+                                    <div class="carousel-item active float-left w-full">
+                                    <img
+                                        src="./img/ibu2.png"
+                                        class="block w-full"
+                                        alt="Pedagang"
+                                    />
+                                    </div>
+                        
+                                    <div class="carousel-item float-left w-full">
+                                    <img
+                                        src="./img/ibu2.png"
+                                        class="block w-full"
+                                        alt="Pedagang"
+                                    />
+                                    </div>
+                        
+                                    <div class="carousel-item float-left w-full">
+                                    <img
+                                        src="./img/ibu2.png"
+                                        class="block w-full"
+                                        alt="Pedagang"
+                                    />
+                                    </div>
+                                </div>
+                    
+                            </div>
+                    
+                            <!-- Caption -->
+                            <div class="p-5">
+                                <h1 class="mb-3 text-xl text-center text-hitam-primary font-nunito-sans font-bold sm:text-2xl xl:text-3xl"> Pemberdayaan Ekonomi Kerakyatan </h1>
+                        
+                                <p class="mb-3 text-justify text-hitam-secondary font-nunito-sans font-light sm:text-lg"> Kewirausahaan di bidang kerajinan dengan bahan bahu lidi merupakan ekonomi padat karya, yang perlu ditumbuh kembangkan pada masyarakat pedesaan. </p>
+                        
+                                <p class="text-justify text-hitam-secondary font-nunito-sans font-light sm:text-lg"> Potensi tenaga kerja di desa yang belum terserap dan umumnya minim pengalaman dan modal, sangat cocok jika diberdayakan dengan memanfaatkan potensi lokal yaitu lidi kelapa. </p>
+                    
+                            </div>
+                    
+                        </div>
+
+                        <!-- Container Flex Column (Kolaborasi - Jual Produk) -->
+                        <div class="w-full mb-8 lg:flex lg:flex-col lg:justify-between lg:w-[50%] lg:mb-0">
+
+                            <!-- Kolaborasi Bersama SiLidi -->
+                            <div class="w-full mb-8 p-5 self-center text-center card lg:flex lg:h-[48%] lg:mb-0 lg:no-card lg:card-tipis">
+
+                                <!-- Text Centering -->
+                                <div class="lg:m-auto">
+                                    <h1 class="mb-2 text-xl text-hitam-primary font-nunito-sans font-bold sm:text-2xl xl:text-3xl"> Ingin Collabs Bareng Kami ? </h1>
+    
+                                    <p class="mb-2 text-base text-hitam-secondary font-nunito-sans font-light sm:text-lg"> SiLidi percaya dampak kebaikan akan semakin besar dengan gotong royong dan kolaborasi. Silahkan kontak kami melalui email : </p>
+        
+                                    <p class="text-base font-nunito-sans font-medium sm:text-lg"> SiLidi<span class="text-green-primary">@gmail</span>.com </p>
+                                </div>
+    
+                            </div>
+    
+                            <!-- Jual Produk -->
+                            <div class="w-full p-5 self-center card lg:flex lg:h-[48%] lg:no-card lg:card-tipis">
+                                
+                                <!-- Text Centering -->
+                                <div class="lg:m-auto">
+                                    <!-- Caption -->
+                                    <div class="text-center mb-5">
+                                        <h1 class="mb-2 text-xl text-hitam-primary font-nunito-sans font-bold sm:text-2xl xl:text-3xl"> Ingin Menjual Produk Anda? </h1>
+            
+                                        <p class="text-base text-hitam-secondary font-nunito-sans font-light sm:text-lg"> SiLidi memberikan layanan untuk anda yang ingin menjual kerajinan lidi tanpa ribet, jangan khawatir kami siap memberikan layanan terbaik. </p>
+                                    </div>
+            
+                                    <!-- Button -->
+                                    <div>
+                                        <button class="btn-tentang block w-4/5 m-auto p-4 rounded-2xl text-lg text-white font-nunito-sans font-bold bg-green-primary hover:opacity-80 active:text-black transition duration-150 ease-in-out sm:text-xl md:w-[60%] lg:w-[70%]">
+                                            Jual Produkmu
+                                        </button>
+                                    </div>
+                                </div>
+        
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="w-full mb-8 p-5 self-center card lg:p-10 lg:no-card lg:card-tipis">
+                        
+                        <!-- Caption -->
+                        <div class="mb-6 text-center lg:mb-10">
+                            <h1 class="mb-2 text-xl text-hitam-primary font-nunito-sans font-bold sm:text-2xl xl:text-3xl"> Sosial Media Kami </h1>
+
+                            <p class="text-base text-hitam-secondary font-nunito-sans font-light sm:text-lg"> Ikuti perkembangan kami dengan cara follow sosial media kami </p>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="flex flex-wrap justify-evenly gap-4 w-full lg:text-white">
+
+                            <!-- Facebook -->
+                            <div class="sosmed-card lg:gradient-hijau">
+                                <span class="p-1.5 absolute top-1/2 left-1 -translate-y-1/2 text-blue-500 lg:bg-white lg:rounded-lg lg:left-3">
+                                    <svg class="w-6 h-6 lg:w-10 lg:h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z" fill="currentColor" /></svg>
+                                </span>
+
+                                <h1 class="text-base font-nunito-sans font-bold lg:text-xl"> SiLidiIndonesia </h1>
+                            </div>
+
+                            <!-- Instagram -->
+                            <div class="sosmed-card lg:gradient-hijau">
+                                <span class="p-1.5 absolute top-1/2 left-1 -translate-y-1/2 text-pink-500 lg:bg-white lg:rounded-lg lg:left-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram w-6 h-6 lg:w-10 lg:h-10" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                    </svg>
+                                </span>
+
+                                <h1 class="text-base font-nunito-sans font-bold lg:text-xl"> SiLidiIndonesia </h1>
+                            </div>
+
+                            <!-- Youtube -->
+                            <div class="sosmed-card lg:mt-5 lg:gradient-hijau">
+                                <span class="p-1.5 absolute top-1/2 left-1 -translate-y-1/2 text-red-500 lg:bg-white lg:rounded-lg lg:left-3">
+                                    <svg class="w-6 h-6 lg:w-10 lg:h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7ZM2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM10 9L14 12L10 15V9Z" fill="currentColor" />
+                                    </svg>
+                                </span>
+
+                                <h1 class="text-base font-nunito-sans font-bold lg:text-xl"> SiLidiIndonesia </h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Hubungi Kami -->
+                    <div class="w-full p-5 self-center card lg:no-card lg:card-tipis">
+                                            
+                        <!-- Caption -->
+                        <div class="text-center mb-5 lg:mb-8">
+                            <h1 class="mb-2 text-xl text-hitam-primary font-nunito-sans font-bold sm:text-2xl lg:mb-4 xl:text-3xl"> #MariNaikkanHargaJual </h1>
+
+                            <p class="text-base text-hitam-secondary font-nunito-sans font-light sm:text-lg"> Jika masih memiliki pertanyaan yang belum terjawab, tim SiLidi siap menjawab semua pertanyaan anda. </p>
+                        </div>
+
+                        <!-- Button -->
+                        <div>
+                            <button class="btn-tentang block w-4/5 m-auto p-4 rounded-2xl text-lg text-white font-nunito-sans font-bold bg-green-primary hover:opacity-80 active:text-black transition duration-150 ease-in-out sm:text-xl md:w-[60%] lg:w-[40%] lg:p-6">
+                                Hubungi Kami
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="h-[60vh] gradient-cokelat hidden lg:block">
+            <div class="flex flex-col justify-around items-center w-full h-full">
+      
+              <!-- SiLidi -->
+              <div class="w-full text-center">
+                <h1 class="text-6xl text-white font-nunito-sans font-black"> SiLidi </h1>
+              </div>
+      
+              <!-- Middle -->
+              <div class="flex justify-around w-full">
+      
+                <!-- Links Kiri -->
+                <div>
+                  <h1 class="mb-2 text-2xl text-center text-white font-nunito-sans font-semibold"> LINKS </h1>
+      
+                  <div class="flex flex-row gap-5">
+      
+                    <!-- Kiri -->
+                    <div>
+                      <ul>
+                        <li> <a href="index.html" class="text-lg text-white font-nunito-sans font-light"> Home </a> </li>
+                        <li> <a href="product.html" class="text-lg text-white font-nunito-sans font-light"> Product </a> </li>
+                      </ul>
+                    </div>
+      
+                    <!-- Kanan -->
+                    <ul>
+                      <li> <a href="pelatihan.html" class="text-lg text-white font-nunito-sans font-light"> Pelatihan </a>
+                      </li>
+                      <li> <a href="about.html" class="text-lg text-white font-nunito-sans font-light"> About Us </a> </li>
+                    </ul>
+      
+                  </div>
+                </div>
+      
+                <!-- Contact Email -->
+                <div>
+                  <h1 class="mb-2 text-3xl text-white font-nunito-sans font-semibold"> Contact Email </h1>
+                  <p class="text-lg text-white text-center font-nunito-sans font-light"> SiLidi@gmail.com </p>
+                </div>
+      
+                <!-- Links Kanan -->
+                <div>
+                  <h1 class="text-2xl text-white font-nunito-sans font-semibold"> LINKS </h1>
+      
+                  <div class="flex flex-row">
+      
+                    <!-- Kiri -->
+                    <div>
+                      <ul>
+                        <li> <a href="" class="text-lg text-white font-nunito-sans font-light"> Our Company </a> </li>
+                        <li> <a href="" class="text-lg text-white font-nunito-sans font-light"> Our Heritage </a> </li>
+                        <li> <a href="" class="text-lg text-white font-nunito-sans font-light"> Our Center </a> </li>
+                      </ul>
+                    </div>
+      
+                  </div>
+                </div>
+      
+              </div>
+      
+              <!-- Bottom -->
+              <div class="flex w-full justify-around">
+      
+                <!-- Copyright -->
+                <div class="text-left text-sm font-nunito-sans text-white font-semibold">
+                  <p> © 2022 SiLidi. All rights reserved. </p>
+                </div>
+      
+                <!-- Icon Medsos -->
+                <div class="flex gap-5 text-white">
+      
+                  <!-- Facebook -->
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7 bi bi-facebook"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                  </span>
+      
+                  <!-- Twitter -->
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7 bi bi-twitter"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                  </span>
+      
+                  <!-- Instagram -->
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7 bi bi-instagram"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                  </span>
+      
+                  <!-- Youtube -->
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7 bi bi-youtube"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                    </svg>
+                  </span>
+      
+                </div>
+      
+                <!-- Terms & Privacy -->
+                <div class="flex gap-5 text-sm font-nunito-sans text-white font-semibold">
+                  <p> Terms Of Service </p>
+                  <p> Privacy Policy </p>
+                </div>
+      
+              </div>
+      
+            </div>
+        </footer>
+
+        <script src="./js/about.js"></script>
+        <script src="../node_modules/tw-elements/dist/js/index.min.js"></script>
+
+    </body>
+
+</html>
